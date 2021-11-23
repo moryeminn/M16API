@@ -1,0 +1,14 @@
+C:\Users\morye\source\repos\M16AlignAPI\M16AlignAPI\bin\Debug\netcoreapp2.1\M16AlignAPI.deps.json
+C:\Users\morye\source\repos\M16AlignAPI\M16AlignAPI\bin\Debug\netcoreapp2.1\M16AlignAPI.runtimeconfig.json
+C:\Users\morye\source\repos\M16AlignAPI\M16AlignAPI\bin\Debug\netcoreapp2.1\M16AlignAPI.runtimeconfig.dev.json
+C:\Users\morye\source\repos\M16AlignAPI\M16AlignAPI\bin\Debug\netcoreapp2.1\M16AlignAPI.dll
+C:\Users\morye\source\repos\M16AlignAPI\M16AlignAPI\bin\Debug\netcoreapp2.1\M16AlignAPI.pdb
+C:\Users\morye\source\repos\M16AlignAPI\M16AlignAPI\obj\Debug\netcoreapp2.1\M16AlignAPI.csprojAssemblyReference.cache
+C:\Users\morye\source\repos\M16AlignAPI\M16AlignAPI\obj\Debug\netcoreapp2.1\M16AlignAPI.csproj.CoreCompileInputs.cache
+C:\Users\morye\source\repos\M16AlignAPI\M16AlignAPI\obj\Debug\netcoreapp2.1\M16AlignAPI.RazorAssemblyInfo.cache
+C:\Users\morye\source\repos\M16AlignAPI\M16AlignAPI\obj\Debug\netcoreapp2.1\M16AlignAPI.RazorAssemblyInfo.cs
+C:\Users\morye\source\repos\M16AlignAPI\M16AlignAPI\obj\Debug\netcoreapp2.1\M16AlignAPI.AssemblyInfoInputs.cache
+C:\Users\morye\source\repos\M16AlignAPI\M16AlignAPI\obj\Debug\netcoreapp2.1\M16AlignAPI.AssemblyInfo.cs
+C:\Users\morye\source\repos\M16AlignAPI\M16AlignAPI\obj\Debug\netcoreapp2.1\M16AlignAPI.RazorTargetAssemblyInfo.cache
+C:\Users\morye\source\repos\M16AlignAPI\M16AlignAPI\obj\Debug\netcoreapp2.1\M16AlignAPI.dll
+C:\Users\morye\source\repos\M16AlignAPI\M16AlignAPI\obj\Debug\netcoreapp2.1\M16AlignAPI.pdb
