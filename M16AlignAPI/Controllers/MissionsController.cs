@@ -9,6 +9,7 @@ using M16AlignAPI.Service;
 using System.Drawing;
 using MongoDB.Driver.GeoJsonObjectModel;
 
+
 namespace M16AlignAPI.Controllers
 {
     [ApiController]
@@ -16,10 +17,12 @@ namespace M16AlignAPI.Controllers
     public class MissionsController : ControllerBase
     {
         private readonly MissionService _missionService;
+        private readonly GeoCodeAPI _geoCodeAPI;
 
-        public MissionsController(MissionService MissionService)
+        public MissionsController(MissionService MissionService, GeoCodeAPI GeoCodeAPI)
         {
             _missionService = MissionService;
+            _geoCodeAPI = GeoCodeAPI;
         }
 
         [HttpPost]
@@ -58,13 +61,20 @@ namespace M16AlignAPI.Controllers
                 return StatusCode(500);
             }
         }
-
+      
+        [HttpPost]
         [Route("/find-closest")]
-        public IActionResult FindClosestCountry(double x, double y)
+        public IActionResult FindClosestCountry([FromBody]InputAddress address)
         {
+            string latitude, longitude;          
             try
             {
-                var mission = _missionService.FindclosestMission(x, y);
+                 _geoCodeAPI.GetCoordinates(out latitude, out longitude, address.TargetLocation);
+                if (latitude is null || longitude is null)
+                {
+                    return NotFound("cannot find the coordinates of the address");
+                }
+                var mission = _missionService.FindClosestMission(double.Parse(latitude), double.Parse(longitude));
                 return Ok(mission);
             }
             catch (Exception exception)
