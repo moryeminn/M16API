@@ -60,13 +60,14 @@ namespace M16AlignAPI.Service
         }
 
 
-        public Mission FindclosestMission(double i_GivenLatitude, double i_GivebLongitude)
+
+        public Mission FindClosestMission(double i_GivenLatitude, double i_GivebLongitude)
         {
             double distanceClosestCountry = 1.7976931348623157E+308; // biggest double
             Mission country = new Mission();
             double distance;
             var filter = Builders<Mission>.Filter.Empty;
-            foreach (var mission_ in _missions.Find(filter).ToListAsync().Result)
+            foreach (Mission mission_ in _missions.Find(filter).ToListAsync().Result)
             {
                 distance = DistanceBetweenTwoCoordinates(mission_.Latitude, mission_.Longitude, i_GivenLatitude, i_GivebLongitude);
                 if (distance < distanceClosestCountry)
@@ -77,7 +78,7 @@ namespace M16AlignAPI.Service
             }
             return country;
         }
-
+            
         public double DistanceBetweenTwoCoordinates(double i_LatitudeMission, double i_LongitudeMission, double i_GivenLatitude, double i_GivebLongitude)
         {
             var baseRad = Math.PI * i_LatitudeMission / 180;
